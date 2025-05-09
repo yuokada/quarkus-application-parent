@@ -9,6 +9,8 @@ It centralizes dependency and plugin management, enforces consistent configurati
 ## Usage
 This project serves as a template for creating Quarkus-based REST applications with a standardized structure and configuration.
 
+### Client module
+
 ```xml
   <parent>
     <groupId>io.github.yuokada</groupId>
@@ -16,6 +18,32 @@ This project serves as a template for creating Quarkus-based REST applications w
     <version>${LATEST_VERSION}</version>
   </parent>
 ```
+
+Extensions used in the client module:
+
+- `quarkus-picocli`: For command-line interface (CLI) support.
+- `quarkus-rest-client-jackson`: For JSON serialization and deserialization.
+- `quarkus-smallrye-fault-tolerance`: For implementing fault tolerance patterns.
+
+### Server module
+
+```xml
+  <parent>
+    <groupId>io.github.yuokada</groupId>
+    <artifactId>quarkus-server-application-base</artifactId>
+    <version>${LATEST_VERSION}</version>
+  </parent>
+```
+
+Extensions used in the client module:
+
+- `quarkus-rest-jackson`: For JSON serialization and deserialization.
+- `quarkus-smallrye-fault-tolerance`: For implementing fault tolerance patterns.
+- `quarkus-logging-json`: For structured logging in JSON format.
+- `quarkus-smallrye-openapi`: For generating OpenAPI documentation.
+- `quarkus-smallrye-health`: For health checks and metrics.
+- `quarkus-hibernate-validator`: For bean validation.
+
 
 ---
 
