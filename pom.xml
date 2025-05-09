@@ -70,7 +70,7 @@
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-rest-client</artifactId>
+            <artifactId>quarkus-picocli</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
