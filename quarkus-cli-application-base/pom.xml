@@ -14,7 +14,7 @@
   <artifactId>quarkus-cli-application-base</artifactId>
   <packaging>pom</packaging>
   <name>${project.groupId}:${project.artifactId}</name>
-  <description>Quarkus application base for private use</description>
+  <description>Quarkus application base for private cli applications</description>
   <url>https://github.com/yuokada/quarkus-cli-application-base</url>
 
   <dependencies>

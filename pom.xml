@@ -23,6 +23,7 @@
 
   <modules>
     <module>quarkus-cli-application-base</module>
+    <module>quarkus-server-application-base</module>
   </modules>
 
   <properties>
