@@ -4,28 +4,18 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.yuokada</groupId>
-    <artifactId>quarkus-application-parent</artifactId>
-    <version>1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <parent>
+        <groupId>io.github.yuokada</groupId>
+        <artifactId>quarkus-application-parent</artifactId>
+        <version>1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
 
-    <!--
+    <artifactId>quarkus-cli-application-base</artifactId>
+    <packaging>pom</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Quarkus application base for private use</description>
     <url>https://github.com/yuokada/quarkus-cli-application-base</url>
-    -->
-
-    <developers>
-        <developer>
-            <id>yuokada</id>
-            <name>Yukihiro Okada</name>
-            <url>https://github.com/yuokada</url>
-        </developer>
-    </developers>
-
-    <modules>
-        <module>quarkus-cli-application-base</module>
-    </modules>
 
     <properties>
         <compiler-plugin.version>3.14.0</compiler-plugin.version>
@@ -54,24 +44,36 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+        <!--
+            Options to override the compiler arguments directly on the compiler argument line to separate
+        between what
+            the IDE understands as the source level and what the Maven compiler actually use.
+        -->
         <maven.compiler.argument.target>${maven.compiler.target}</maven.compiler.argument.target>
         <maven.compiler.argument.source>${maven.compiler.source}</maven.compiler.argument.source>
         <maven.compiler.argument.testTarget>${maven.compiler.testTarget}</maven.compiler.argument.testTarget>
         <maven.compiler.argument.testSource>${maven.compiler.testSource}</maven.compiler.argument.testSource>
     </properties>
 
-
-  <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>${quarkus.platform.group-id}</groupId>
-        <artifactId>${quarkus.platform.artifact-id}</artifactId>
-        <version>${quarkus.platform.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-picocli</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-client-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-arc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-  </dependencyManagement>
 
     <build>
         <pluginManagement>
@@ -240,18 +242,4 @@
             </build>
         </profile>
     </profiles>
-
-    <repositories>
-        <repository>
-            <id>quarkus-cli-application-base-snapshots</id>
-            <name>Central Portal Snapshots</name>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 </project>
