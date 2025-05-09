@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.yuokada</groupId>
-    <artifactId>quarkus-application-base</artifactId>
+    <artifactId>quarkus-cli-application-base</artifactId>
     <version>7-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Quarkus application base for private use</description>
-    <url>https://github.com/yuokada/quarkus-application-base</url>
+    <url>https://github.com/yuokada/quarkus-cli-application-base</url>
 
     <developers>
         <developer>
@@ -191,9 +191,9 @@
     </build>
 
     <scm>
-        <url>https://github.com/yuokada/quarkus-application-base</url>
-        <connection>scm:git:git@github.com:yuokada/quarkus-application-base.git</connection>
-        <developerConnection>scm:git:git@github.com:yuokada/quarkus-application-base.git</developerConnection>
+        <url>https://github.com/yuokada/quarkus-cli-application-base</url>
+        <connection>scm:git:git@github.com:yuokada/quarkus-cli-application-base.git</connection>
+        <developerConnection>scm:git:git@github.com:yuokada/quarkus-cli-application-base.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
@@ -273,7 +273,7 @@
 
     <repositories>
         <repository>
-            <id>quarkus-application-base-snapshots</id>
+            <id>quarkus-cli-application-base-snapshots</id>
             <name>Central Portal Snapshots</name>
             <url>https://central.sonatype.com/repository/maven-snapshots/</url>
             <releases>

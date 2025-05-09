@@ -1,5 +1,5 @@
 # Quarkus Application Base
-[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.yuokada/quarkus-application-base)](https://central.sonatype.com/artifact/io.github.yuokada/quarkus-application-base)
+[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.yuokada/quarkus-cli-application-base)](https://central.sonatype.com/artifact/io.github.yuokada/quarkus-cli-application-base)
 
 
 
@@ -12,7 +12,7 @@ This project serves as a template for creating Quarkus-based REST applications w
 ```xml
   <parent>
     <groupId>io.github.yuokada</groupId>
-    <artifactId>quarkus-application-base</artifactId>
+    <artifactId>quarkus-cli-application-base</artifactId>
     <version>${LATEST_VERSION}</version>
   </parent>
 ```
