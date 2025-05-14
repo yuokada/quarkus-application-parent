@@ -160,9 +160,9 @@
   </build>
 
   <scm>
-    <url>https://github.com/yuokada/quarkus-cli-application-base</url>
-    <connection>scm:git:git@github.com:yuokada/quarkus-cli-application-base.git</connection>
-    <developerConnection>scm:git:git@github.com:yuokada/quarkus-cli-application-base.git</developerConnection>
+    <url>https://github.com/yuokada/quarkus-application-base</url>
+    <connection>scm:git:git@github.com:yuokada/quarkus-application-base.git</connection>
+    <developerConnection>scm:git:git@github.com:yuokada/quarkus-application-base.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
