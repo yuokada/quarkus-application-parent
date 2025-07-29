@@ -6,11 +6,11 @@
   <artifactId>quarkus-application-parent</artifactId>
   <version>0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <!--
+
   <name>${project.groupId}:${project.artifactId}</name>
   <description>Quarkus application base for private use</description>
   <url>https://github.com/yuokada/quarkus-application-parent</url>
-  -->
+
   <developers>
     <developer>
       <id>yuokada</id>
@@ -137,9 +137,7 @@
         </executions>
         <configuration>
           <systemPropertyVariables>
-            <native.image.path>
-              ${project.build.directory}/${project.build.finalName}-runner
-            </native.image.path>
+            <native.image.path> ${project.build.directory}/${project.build.finalName}-runner </native.image.path>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
