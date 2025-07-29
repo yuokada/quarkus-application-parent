@@ -1,5 +1,6 @@
 # Quarkus Application Base
 [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.yuokada/quarkus-cli-application-base)](https://central.sonatype.com/artifact/io.github.yuokada/quarkus-cli-application-base)
+[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.yuokada/quarkus-server-application-base)](https://central.sonatype.com/artifact/io.github.yuokada/quarkus-server-application-base)
 
 
 
