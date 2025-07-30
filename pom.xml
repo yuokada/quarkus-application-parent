@@ -40,10 +40,6 @@
     <central-publishing-plugin.version>0.8.0</central-publishing-plugin.version>
     <!-- Default properties -->
     <maven.compiler.parameters>true</maven.compiler.parameters>
-    <maven.compiler.source>${maven.compiler.release}</maven.compiler.source>
-    <maven.compiler.target>${maven.compiler.release}</maven.compiler.target>
-    <maven.compiler.testTarget>${maven.compiler.target}</maven.compiler.testTarget>
-    <maven.compiler.testSource>${maven.compiler.source}</maven.compiler.testSource>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
     <!-- Cross plugins settings -->
