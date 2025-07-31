@@ -65,7 +65,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${compiler-plugin.version}</version>
         <configuration>
           <showDeprecation>true</showDeprecation>
           <showWarnings>true</showWarnings>
@@ -79,7 +78,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>${surefire-plugin.version}</version>
         <configuration>
           <systemPropertyVariables>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
@@ -90,7 +88,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>${surefire-plugin.version}</version>
         <executions>
           <execution>
             <goals>
@@ -112,7 +109,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>${release-plugin.version}</version>
         <configuration>
           <pushChanges>false</pushChanges>
           <tagNameFormat>v@{project.version}</tagNameFormat>
@@ -129,7 +125,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>${javadoc-plugin.version}</version>
             <executions>
               <execution>
                 <goals>
@@ -153,7 +148,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>${gpg-plugin.version}</version>
             <configuration>
               <gpgArguments>
                 <arg>--pinentry-mode</arg>
