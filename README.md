@@ -78,7 +78,7 @@ Run the following commands on the `master` branch to cut a new release:
 
 ```bash
 git checkout master
-./mvnw release:clean release:prepare
+./mvnw -B release:clean release:prepare
 git push --follow-tags
 ```
 
