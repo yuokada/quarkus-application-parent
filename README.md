@@ -36,7 +36,7 @@ Extensions used in the client module:
   </parent>
 ```
 
-Extensions used in the client module:
+Extensions used in the server module:
 
 - `quarkus-rest-jackson`: For JSON serialization and deserialization.
 - `quarkus-smallrye-fault-tolerance`: For implementing fault tolerance patterns.
