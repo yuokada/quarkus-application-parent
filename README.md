@@ -36,7 +36,7 @@ Extensions used in the client module:
   </parent>
 ```
 
-Extensions used in the client module:
+Extensions used in the server module:
 
 - `quarkus-rest-jackson`: For JSON serialization and deserialization.
 - `quarkus-smallrye-fault-tolerance`: For implementing fault tolerance patterns.
@@ -72,10 +72,35 @@ Contributions are welcome! If you have suggestions or improvements, feel free to
 
 ---
 
-## 📝 License
+## 📦 Release Procedure
 
-This project is licensed under the [MIT License](LICENSE).
+Run the following commands on the `master` branch to cut a new release:
+
+```bash
+git checkout master
+./mvnw -B release:clean release:prepare
+git push --follow-tags
+```
+
+After the tags are pushed, GitHub Actions performs `mvn release:perform` to deploy
+artifacts to Maven Central.
+
+## ⏪ Rollback
+
+If a release was created by mistake, undo it with:
+
+```bash
+git checkout master
+./mvnw release:rollback
+git tag -d <version>      # replace <version> with the tag to delete
+git push --delete origin <version>
+```
+
+The final command removes the prepare commit so the repository returns to its
+previous state.
 
 ---
 
-Feel free to modify this `README.md` to better suit your project's specifics or to add more detailed instructions as needed. 
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
