@@ -1,0 +1,3 @@
+- Centralize plugin versions using pluginManagement instead of redefining plugins in each module.
+- Avoid configuring maven-deploy-plugin with `<skip>true>`; use the deployAtEnd parameter or configure distributionManagement.
+- Evaluate necessity of custom snapshot repository under `<repositories>`.
