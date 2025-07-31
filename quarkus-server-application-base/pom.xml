@@ -65,15 +65,11 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${compiler-plugin.version}</version>
         <configuration>
           <showDeprecation>true</showDeprecation>
           <showWarnings>true</showWarnings>
-          <source>${maven.compiler.argument.source}</source>
-          <target>${maven.compiler.argument.target}</target>
-          <testSource>${maven.compiler.argument.testSource}</testSource>
-          <testTarget>${maven.compiler.argument.testTarget}</testTarget>
           <parameters>true</parameters>
+          <release>${maven.compiler.release}</release>
           <compilerArgs>
             <arg>-Xlint:unchecked</arg>
           </compilerArgs>
@@ -82,7 +78,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>${surefire-plugin.version}</version>
         <configuration>
           <systemPropertyVariables>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
@@ -93,7 +88,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>${surefire-plugin.version}</version>
         <executions>
           <execution>
             <goals>
@@ -115,7 +109,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>${release-plugin.version}</version>
         <configuration>
           <pushChanges>false</pushChanges>
           <tagNameFormat>v@{project.version}</tagNameFormat>

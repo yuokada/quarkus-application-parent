@@ -1,0 +1,3 @@
+- Avoid configuring maven-deploy-plugin with `<skip>true>`; use the deployAtEnd parameter or configure distributionManagement.
+- Remove unused property `<skipITs>` or wire it to failsafe plugin.
+- Evaluate necessity of custom snapshot repository under `<repositories>`.
