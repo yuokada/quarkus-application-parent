@@ -69,11 +69,8 @@
         <configuration>
           <showDeprecation>true</showDeprecation>
           <showWarnings>true</showWarnings>
-          <source>${maven.compiler.argument.source}</source>
-          <target>${maven.compiler.argument.target}</target>
-          <testSource>${maven.compiler.argument.testSource}</testSource>
-          <testTarget>${maven.compiler.argument.testTarget}</testTarget>
           <parameters>true</parameters>
+          <release>${maven.compiler.release}</release>
           <compilerArgs>
             <arg>-Xlint:unchecked</arg>
           </compilerArgs>
