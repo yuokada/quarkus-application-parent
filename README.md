@@ -72,9 +72,9 @@ Contributions are welcome! If you have suggestions or improvements, feel free to
 
 ---
 
-## 📦 Release
+## 📦 Release Procedure
 
-Run the following steps on the `master` branch to create a release:
+Run the following commands on the `master` branch to cut a new release:
 
 ```bash
 git checkout master
@@ -83,21 +83,23 @@ git push
 git push --tags
 ```
 
-Pushing tags triggers the GitHub Actions workflow to publish the artifacts to Maven Central.
+After the tags are pushed, GitHub Actions performs `mvn release:perform` to deploy
+artifacts to Maven Central.
 
 ## ⏪ Rollback
 
-If a release was created in error, you can undo it with the following commands:
+If a release was created by mistake, undo it with:
 
 ```bash
 git checkout master
 ./mvnw release:rollback
-git tag -d <version>
+git tag -d <version>      # replace <version> with the tag to delete
 git push --delete origin <version>
 git reset --hard HEAD~1
 ```
 
-This removes the release tag and reverts the prepare commit.
+The final command removes the prepare commit so the repository returns to its
+previous state.
 
 ---
 
@@ -107,4 +109,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to modify this `README.md` to better suit your project's specifics or to add more detailed instructions as needed. 
