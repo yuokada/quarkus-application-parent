@@ -72,6 +72,21 @@ Contributions are welcome! If you have suggestions or improvements, feel free to
 
 ---
 
+## 📦 Release
+
+Run the following steps on the `master` branch to create a release:
+
+```bash
+git checkout master
+./mvnw release:clean release:prepare
+git push
+git push --tags
+```
+
+Pushing tags triggers the GitHub Actions workflow to publish the artifacts to Maven Central.
+
+---
+
 ## 📝 License
 
 This project is licensed under the [MIT License](LICENSE).
