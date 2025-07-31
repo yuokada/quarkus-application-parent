@@ -79,8 +79,7 @@ Run the following commands on the `master` branch to cut a new release:
 ```bash
 git checkout master
 ./mvnw release:clean release:prepare
-git push
-git push --tags
+git push --follow-tags
 ```
 
 After the tags are pushed, GitHub Actions performs `mvn release:perform` to deploy
