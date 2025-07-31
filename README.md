@@ -85,6 +85,20 @@ git push --tags
 
 Pushing tags triggers the GitHub Actions workflow to publish the artifacts to Maven Central.
 
+## ⏪ Rollback
+
+If a release was created in error, you can undo it with the following commands:
+
+```bash
+git checkout master
+./mvnw release:rollback
+git tag -d <version>
+git push --delete origin <version>
+git reset --hard HEAD~1
+```
+
+This removes the release tag and reverts the prepare commit.
+
 ---
 
 ## 📝 License
