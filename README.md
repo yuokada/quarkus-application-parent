@@ -94,7 +94,6 @@ git checkout master
 ./mvnw release:rollback
 git tag -d <version>      # replace <version> with the tag to delete
 git push --delete origin <version>
-git reset --hard HEAD~1
 ```
 
 The final command removes the prepare commit so the repository returns to its
@@ -105,6 +104,3 @@ previous state.
 ## 📝 License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
