@@ -23,6 +23,7 @@ This project serves as a template for creating Quarkus-based REST applications w
 Extensions used in the client module:
 
 - `quarkus-picocli`: For command-line interface (CLI) support.
+- `quarkus-logging-json`: For structured logging in JSON format.
 - `quarkus-rest-client-jackson`: For JSON serialization and deserialization.
 - `quarkus-smallrye-fault-tolerance`: For implementing fault tolerance patterns.
 
