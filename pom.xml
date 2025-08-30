@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.yuokada</groupId>
   <artifactId>quarkus-application-parent</artifactId>
-  <version>0.9-SNAPSHOT</version>
+  <version>0.9</version>
   <packaging>pom</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
@@ -199,7 +197,7 @@
     <url>https://github.com/yuokada/quarkus-application-parent</url>
     <connection>scm:git:git@github.com:yuokada/quarkus-application-parent.git</connection>
     <developerConnection>scm:git:git@github.com:yuokada/quarkus-application-parent.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v0.9</tag>
   </scm>
 
   <licenses>
