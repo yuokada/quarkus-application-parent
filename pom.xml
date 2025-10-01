@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.yuokada</groupId>
@@ -39,6 +41,8 @@
     <central-publishing-plugin.version>0.9.0</central-publishing-plugin.version>
     <deploy-plugin.version>3.1.4</deploy-plugin.version>
     <checkstyle-plugin.version>3.6.0</checkstyle-plugin.version>
+    <wiremock.version>3.9.1</wiremock.version>
+    <checkstyle.version>10.20.1</checkstyle.version>
     <!-- Default properties -->
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
@@ -52,6 +56,14 @@
         <version>${quarkus.platform.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+
+      <!-- Individual dependencies -->
+      <dependency>
+        <groupId>org.wiremock</groupId>
+        <artifactId>wiremock-standalone</artifactId>
+        <version>${wiremock.version}</version>
+        <scope>test</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
