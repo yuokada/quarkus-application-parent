@@ -1,5 +1,11 @@
 ---
-applyTo: "README.md,AGENTS.md,.github/workflows/**/*.yml,.github/workflows/**/*.yaml,.github/release*.yml,.github/release*.yaml"
+applyTo:
+  - "README.md"
+  - "AGENTS.md"
+  - ".github/workflows/**/*.yml"
+  - ".github/workflows/**/*.yaml"
+  - ".github/release*.yml"
+  - ".github/release*.yaml"
 ---
 
 When editing documentation or workflow files in this repository:

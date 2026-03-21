@@ -1,5 +1,8 @@
 ---
-applyTo: "pom.xml,quarkus-cli-application-base/pom.xml,quarkus-server-application-base/pom.xml"
+applyTo:
+  - "pom.xml"
+  - "quarkus-cli-application-base/pom.xml"
+  - "quarkus-server-application-base/pom.xml"
 ---
 
 When editing Maven POM files in this repository:
