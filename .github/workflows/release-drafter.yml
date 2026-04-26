@@ -2,8 +2,8 @@
 name: Release Drafter
 
 on:
-  # pull_request event is required only for autolabeler
-  pull_request:
+  # pull_request_target event is required for auto-labeler to support PRs from forks
+  pull_request_target:
     types: [opened, reopened, synchronize]
 
 permissions:
@@ -16,6 +16,6 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: release-drafter/release-drafter@v6
+      - uses: release-drafter/release-drafter@v7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
