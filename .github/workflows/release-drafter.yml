@@ -2,8 +2,8 @@
 name: Release Drafter
 
 on:
-  # pull_request event is required only for autolabeler
-  pull_request:
+  # pull_request_target event is required for auto-labeler to support PRs from forks
+  pull_request_target:
     types: [opened, reopened, synchronize]
 
 permissions:
@@ -17,5 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v7
+        with:
+          disable-releaser: ${{ github.event_name == 'pull_request_target' }}
+          disable-autolabeler: ${{ github.event_name != 'pull_request_target' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
