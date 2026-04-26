@@ -17,8 +17,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v7
-        with:
-          disable-releaser: ${{ github.event_name == 'pull_request_target' }}
-          disable-autolabeler: ${{ github.event_name != 'pull_request_target' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
