@@ -2,7 +2,11 @@
 name: Release Drafter
 
 on:
-  # pull_request_target event is required for auto-labeler to support PRs from forks
+  push:
+    branches:
+      - main
+      - master
+  # pull_request_target event is required for autolabeler to support PRs from forks
   pull_request_target:
     types: [opened, reopened, synchronize]
 
@@ -10,12 +14,24 @@ permissions:
   contents: read
 
 jobs:
+  update_release_draft:
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+      pull-requests: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   update_pr_labels:
+    if: github.event_name == 'pull_request_target'
     permissions:
       contents: read
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: release-drafter/release-drafter@v7
+      - uses: release-drafter/release-drafter/autolabeler@v7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
