@@ -39,12 +39,12 @@
     <!-- Test dependencies -->
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-junit5</artifactId>
+      <artifactId>quarkus-junit</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-junit5-mockito</artifactId>
+      <artifactId>quarkus-junit-mockito</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -64,6 +64,7 @@
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
+        <extensions>true</extensions>
       </plugin>
       <plugin>
         <groupId>com.diffplug.spotless</groupId>
@@ -71,14 +72,14 @@
         <configuration>
           <!-- see: https://github.com/diffplug/spotless/tree/main/plugin-maven -->
           <java>
-            <googleJavaFormat>
+            <palantirJavaFormat>
              <version>${palantir-java-format.version}</version>
               <!--
               <style>PALANTIR</style>
               <style>AOSP</style>
               -->
               <formatJavadoc>false</formatJavadoc>
-            </googleJavaFormat>
+            </palantirJavaFormat>
             <importOrder />
             <removeUnusedImports />
             <formatAnnotations />
@@ -137,6 +138,7 @@
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
+          <argLine>@{argLine}</argLine>
         </configuration>
       </plugin>
       <plugin>
@@ -158,6 +160,7 @@
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
+          <argLine>@{argLine}</argLine>
         </configuration>
       </plugin>
       <plugin>
